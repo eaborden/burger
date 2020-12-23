@@ -1,5 +1,5 @@
 // Import MySQL connection.
-var connection = require("../config/connection.js");
+var connection = require("./connection.js");
 
 //need the following three methods
 //selectAll
@@ -7,7 +7,7 @@ var connection = require("../config/connection.js");
 //updateOne
 
 // Import MySQL connection.
-var connection = require("../config/connection.js");
+// var connection = require("./connection.js");
 
 // Helper function for SQL syntax.
 // Let's say we want to pass 3 values into the mySQL query.
@@ -16,11 +16,11 @@ var connection = require("../config/connection.js");
 // ["?", "?", "?"].toString() => "?,?,?";
 function printQuestionMarks(num) {
   var arr = [];
-
+//loop through the questions marks
   for (var i = 0; i < num; i++) {
     arr.push("?");
   }
-
+ //return array to a string
   return arr.toString();
 }
 
@@ -33,12 +33,11 @@ function objToSql(ob) {
     var value = ob[key];
     // check to skip hidden properties
     if (Object.hasOwnProperty.call(ob, key)) {
-      // if string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
+      // if string with spaces, add quotations
       if (typeof value === "string" && value.indexOf(" ") >= 0) {
         value = "'" + value + "'";
       }
-      // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-      // e.g. {sleepy: true} => ["sleepy=true"]
+  //push array
       arr.push(key + "=" + value);
     }
   }
@@ -47,7 +46,7 @@ function objToSql(ob) {
   return arr.toString();
 }
 
-// Object for all our SQL statement functions.
+// Object for all our SQL statement functions. SelectAll()
 var orm = {
   all: function(tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
@@ -58,6 +57,7 @@ var orm = {
       cb(result);
     });
   },
+  // insertOne
   create: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
@@ -78,7 +78,8 @@ var orm = {
       cb(result);
     });
   },
-  // An example of objColVals would be {name: panther, sleepy: true}
+
+  // updateOne
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
@@ -96,6 +97,7 @@ var orm = {
       cb(result);
     });
   },
+
   delete: function(table, condition, cb) {
     var queryString = "DELETE FROM " + table;
     queryString += " WHERE ";
@@ -111,5 +113,5 @@ var orm = {
   }
 };
 
-// Export the orm object for the model (cat.js).
+// Export the orm object for the model (burger.js).
 module.exports = orm;
