@@ -1,92 +1,91 @@
-<div class ="container">
-
-  {{!-- <div class="jumbotron">
-    <h1>Burger Order</h1>
-    <p>Burger Orders, Burger Pickup.</p>
-    <br>
-    <h2>Select a burger</h2>
-    <panel>  
-        <form class="create-form">
-          <div class="form-group">
-            <label for="newburger">Order</label>
-            <input type="text" id="newburger" name="burger">
-            <button type="submit" class="btn btn-success" id="addburger">
-                <span class="fa fa-cutlery"></span>
-           </button>
+{{!-- <div class="container"> --}}
+  <div class="jumbotron">
+    {{!-- the jumbotron container start --}}
+    <div class="container">
+      {{!-- top row --}}
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page header text-center">
+            <h1> Order a Yummy Burger</h1>
           </div>
-        </form>
-    </panel>
-  </div> --}}
-</div>
-<div class="row">
-  <div class= "col-sm-6">
-    <div class="panel panel-default">
-      <div class="panel-heading" id="rightside"><strong>Order the Burger</strong></div>
-      <div class="panel-body">
-        <ul>
-          {{#each burgers}}
-          {{#unless devoured}}
-          {{> burger-block devoured=false}}
-          {{/unless}}
-          {{/each}}
-          </ul>
+          {{!-- start new row for images and form --}}
+          <div class="row">
+            {{!-- start col for image --}}
+            <div class="col-md-3">
+              <div class="thumbnail">
+                <img src="http://placehold.it/150x150" class="img-thumbnail" alt="Placeholder">
+              </div>
+            </div>
+            {{!-- end col for image --}}
 
-          <h2>Burger Devoured!</h2>
+            {{!-- start of the form input column --}}
+            <div class="col-md-6">
+              <panel>
+                <form class="create-form">
+                  <div class="form-group">
+                    <label for="newBurger"><strong>Order your favorite burger</strong></label>
+                    <br>
+                    {{!-- <br> --}}
+                    <input type="text" id="newburger" name="burger_name">
+                    <br>
+                    <br>
+                    <button type="submit" class= "addburger btn btn-success fa fa-money btn-large" id="addburger"></button>
+                    {{!-- <button type="button" class="eatburger btn btn-success fa fa-cutlery" id="eatbutton" data-id="{{this.id}}"></button> --}}
+                      
+                  </div>
+                </form>
+              </panel>
+            </div>
+            {{!-- end form column --}}
+            <div class="col-md-3">
+              <img src="http://placehold.it/150x150" alt="Placeholder" class="img-thumbnail">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{!-- end the jumbotron container --}}
+  {{!-- start of order and devour row & columns --}}
 
-        <ul>
-          {{#each burgers}}
-          {{#if devoured}}
-          {{> burger-block devoured=true}}
-          {{/if}}
-          {{/each}}
-          </ul>
-
-
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading" id="rightside"><strong>Order the Burger</strong></div>
+          <div class="panel-body">
+            <ul>
+              {{#each burgers}}
+              {{#unless devoured}}
+              <li>
+                <strong>{{this.burger_name}}</strong>
+                <button type="button" class="eatburger btn btn-success fa fa-cutlery" id="eatbutton" data-id="{{this.id}}"></button>
+              </li>
+              {{/unless}}
+              {{/each}}
+            </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading" id="rightside"><strong>Burger Was Eaten</strong></div>
+          <div class="panel-body">
+            <ul>
+              {{#each burgers}}
+              {{#if devoured}}
+              <li>
+                <span><strong> {{this.burger_name}}</strong></span>
+                <button type="button" class="delete-burger btn btn-danger fa fa-trash" id="delete-burger" data-id="{{this.id}}"></button>
+              </li></button>
+              </li>
+              {{/if}}
+              {{/each}}
+            </ul>
+          </div>
+        </div>
 
       </div>
     </div>
   </div>
-</div>
-
-
-
-
-
-{{!-- <h1>Cats!</h1>
-
-<h2>Cats that are not sleepy!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block ordered=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Cats that are sleepy!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block ordered=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Type:</label>
-    <input type="text" id="ca" name="burger_name">
-  </div>
-
-  <div class="form-group">
-    <label for="ordered">Ordered</label><br>
-    <input type="radio" name="ordered" value="1" checked> ordered<br>
-    <input type="radio" name="ordered" value="0"> devoured
-  </div>
-
-  <button type="submit">Add Burger</button>
-</form> --}}
