@@ -46,9 +46,7 @@ Deployed application to Heroku
 ## Project Images
 
 ### Image 1: Aplication Screenshot
-![entryscreen](https://github.com/eaborden/note-taker/blob/master/public/assets/img/screenshot.PNG?raw=true)
-
-![application Screenshot](https://github.com/eaborden/burger/blob/master/public/Assets/images/screenshot.PNG?raw=true)
+![screenshot](https://github.com/eaborden/burger/blob/master/public/assets/img/screenshot.PNG?raw=true)
 
 ### Image 2: Directory Structure
 
