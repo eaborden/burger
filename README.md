@@ -47,5 +47,5 @@ Deployed application to Heroku
 
 ### Image 1: Aplication Screenshots
 
-![screenshot]https://github.com/eaborden/burger/blob/master/public/assets/img/screenshot.png?raw=true)
+![screenshot](https://github.com/eaborden/burger/blob/master/public/assets/img/screenshot.png?raw=true)
 
