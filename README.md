@@ -47,7 +47,8 @@ Deployed application to Heroku
 
 ### Image 1: Aplication Screenshots
 
-![screenshot](https://github.com/eaborden/burger/blob/master/public/assets/img/screenshot.PNG?raw=true)
+![screenshot]https://github.com/eaborden/burger/blob/master/public/assets/img/screenshot.png?raw=true)
+![https://github.com/eaborden/burger/blob/master/public/assets/img/screenshot.png]
 
 ### Image 2: Directory Structure
 
