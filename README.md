@@ -45,7 +45,11 @@ Deployed application to Heroku
 
 ## Project Images
 
-### Image 1: Aplication Screenshots
+### Image 1: Aplication Screenshot
 
 ![screenshot](https://github.com/eaborden/burger/blob/master/public/assets/img/screenshot.png?raw=true)
+
+### Image 2: Directory Structure
+
+![directory structure](https://github.com/eaborden/burger/blob/master/public/assets/img/dir_structure.png?raw=true)
 
