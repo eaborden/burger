@@ -45,7 +45,7 @@ Deployed application to Heroku
 
 ## Project Images
 
-### Image 1: Aplication Screenshot
+### Image 1: Aplication Screenshots
 
 ![screenshot](https://github.com/eaborden/burger/blob/master/public/assets/img/screenshot.PNG?raw=true)
 
