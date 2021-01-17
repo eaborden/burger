@@ -17,12 +17,13 @@ https://eddies-burgers.herokuapp.com/
 [Project Images](#project-images)
 
 ## Required Elements
-MySQL
-Node
-Express
-Handlebars
-Object Relational Model (ORM)
-JawsDB
+
+MySQL\
+Node\
+Express\
+Handlebars\
+Object Relational Model (ORM)\
+JawsDB\
 Deployed application to Heroku
 
 ## Requirements
