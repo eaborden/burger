@@ -36,7 +36,7 @@ Deployed application to Heroku
     *  schema.sql
     *  seeds.sql
 3. Setup Config
-    * connectoions
+    * connections
     * ORM
 4. Setup Models    
 5. Setup controller
